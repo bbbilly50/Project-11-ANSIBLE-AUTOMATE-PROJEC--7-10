@@ -224,4 +224,10 @@ git add <selected files>
 
 git commit -m "commit message"
 ```
+To push the command to our branch:
+
+`git push origin ansible-play`
+
+![push-origin](./images-project11/push-origin.PNG)
+
 
