@@ -1,8 +1,7 @@
-
+<<<<<<< ansible-play
 # ANSIBLE CONFIGURATION MANAGEMENT – AUTOMATE PROJECT 7 TO 10
 
 </br>
-
 
 You have been implementing some interesting projects up untill now, and that is awesome.
 
@@ -24,4 +23,3 @@ On the diagram below the Virtual Private Network (VPC) is divided into two subne
 Task
 Install and configure Ansible client to act as a Jump Server/Bastion Host
 Create a simple Ansible playbook to automate servers configuration
-
