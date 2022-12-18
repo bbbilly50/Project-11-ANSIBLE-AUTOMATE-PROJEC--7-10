@@ -1,7 +1,7 @@
 # ANSIBLE CONFIGURATION MANAGEMENT – AUTOMATE PROJECT 7 TO 10
 
 </br>
-gir
+
 You have been implementing some interesting projects up untill now, and that is awesome.
 
 In Projects 7 to 10 you had to perform a lot of manual operations to seet up virtual servers, install and configure required software, deploy your web application.
