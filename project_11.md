@@ -230,4 +230,30 @@ To push the command to our branch:
 
 ![push-origin](./images-project11/push-origin.PNG)
 
+2. Create a Pull request (PR)
+
+3. Wear a hat of another developer for a second, and act as a reviewer.
+
+4. If the reviewer is happy with your new feature development, merge the code to the master branch.
+
+5. Head back on your terminal, checkout from the feature branch into the master, and pull down the latest changes.
+
+`git switch main`
+
+`git pull ansible-play`
+
+`git merge ansible-play`
+
+Once your code changes appear in master branch – Jenkins will do its job and save all the files (build artifacts) to `/var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/` directory on `Jenkins-Ansible server`.
+
+### **Step 7 – Run first Ansible test**
+
+Now, it is time to `execute ansible-playbook` command and verify if your playbook actually works:
+
+`cd ansible-config-mgt`
+
+`ansible-playbook -i inventory/dev.yml playbooks/common.yml`
+
+You can go to each of the servers and check if wireshark has been installed by running which wireshark or wireshark --version
+
 
