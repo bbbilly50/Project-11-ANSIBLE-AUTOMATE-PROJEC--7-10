@@ -171,7 +171,8 @@ Update your inventory/dev.yml file with this snippet of code:
 In `common.yml` playbook you will write configuration for `repeatable, re-usable, and multi-machine tasks` that is common to systems within the infrastructure.
 
 Update your `playbooks/common.yml` file with following code:
-```py
+
+```yml
 ---
 - name: update web, nfs and db servers
   hosts: webservers, nfs, db
@@ -209,6 +210,63 @@ update this playbook with following tasks:
 - Run some shell script
 - …
     
+
+
+``` yml   
+---
+- name: update web, and nfs servers
+  hosts: webservers, nfs, 
+  remote_user: ec2-user
+  become: yes
+  become_user: root
+  tasks:
+    - name: ensure wireshark is at the latest version
+      yum:
+        name: wireshark
+        state: latest
+
+- name: update LB and db server
+  hosts: lb, db
+  remote_user: ubuntu
+  become: yes
+  become_user: root
+  tasks:
+    - name: Update apt repo
+      apt: 
+        update_cache: yes
+
+    - name: ensure wireshark is at the latest version
+      apt:
+        name: wireshark
+        state: latest
+
+        - name: create a diretory , a file and set timezone on all servers 
+  hosts: webservers, nfs, lb, db
+  become: yes
+  tasks:
+    - name: create a directory
+      file:
+        path: /home/sample-directory
+        state: directory
+
+- name: create a file
+  hosts: webservers, nfs, lb, db
+  become: yes
+  tasks:
+    - name: create a file
+      file:
+        path: /home/sample-directory/ansible.txt
+        state: touch
+
+    - name: set timezone
+      timezone:
+        name: usa/georgia
+``` 
+      
+
+        
+
+
 ### **Step 6 – Update GIT with the latest code**
 
 Now you have a separate branch, you will need to know how to `raise a Pull Request (PR)`, get your `branch peer reviewed` and `merged` to the `master branch`.
