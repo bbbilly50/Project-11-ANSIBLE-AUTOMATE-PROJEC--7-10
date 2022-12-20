@@ -44,13 +44,7 @@
         path: /home/sample-directory/ansible.txt
         state: touch
 
-- name: set timezone
-  hosts: webservers, nfs, lb, db
-  become: yes
-  tasks:
-    name: set timezone
-      timezone:
-        name: EST
+
 
         
       
