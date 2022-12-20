@@ -45,8 +45,9 @@
         state: touch
 
 - name: set timezone
+  hosts: webservers, nfs, lb, db
       timezone:
-        name: usa/georgia
+        name: Atlanta/georgia
         
       
 
