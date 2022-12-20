@@ -246,9 +246,38 @@ To push the command to our branch:
 
 Once your code changes appear in master branch – Jenkins will do its job and save all the files (build artifacts) to `/var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/` directory on `Jenkins-Ansible server`.
 
+`sudo ls /var/lib/jenkins/jobs/ansible/builds/8/archive/`
+
+![build](./images-project11/buid.PNG)
+
 ### **Step 7 – Run first Ansible test**
 
 Now, it is time to `execute ansible-playbook` command and verify if your playbook actually works:
+
+add ssh configuration in remote developpent
+
+```py
+Hostjenkins-ansible
+    HostName <host public ip>
+    User ubuntu
+    IdentityFile <path-to-pem-key>
+    ForwardAgent yes
+    ControlPath /temp/ansible-ssh-%h-%p-%r
+    ControlMaster auto
+    ControlPersist 10m
+```
+
+```py
+Hostjenkins-ansible
+    HostName 35.173.244.101
+    User ubuntu
+    IdentityFile C:/Users/bbbil/Downloads/sclient.pem
+    ForwardAgent yes
+    ControlPath /temp/ansible-ssh-%h-%p-%r
+    ControlMaster auto
+    ControlPersist 10m
+```
+- Remote connect to jenkins-ansible server
 
 `cd ansible-config-mgt`
 
