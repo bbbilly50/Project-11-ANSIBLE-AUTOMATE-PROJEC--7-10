@@ -277,12 +277,28 @@ Hostjenkins-ansible
     ControlMaster auto
     ControlPersist 10m
 ```
-- Remote connect to jenkins-ansible server
 
-`cd ansible-config-mgt`
+![vscode-config](./images-project11/vs-code%20ssh-config.PNG)
+
+- ssh into jenkins-ansible server
+
+
+`cd /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive`
+
+Run
 
 `ansible-playbook -i inventory/dev.yml playbooks/common.yml`
 
-You can go to each of the servers and check if wireshark has been installed by running which wireshark or wireshark --version
+![ansible-test](./images-project11/ansible%20test.PNG)
 
+</br>
+cdwireshark has been installed by running which wireshark or wireshark --version
+
+</br>
+
+![wireshark](./images-project11/wireshark-v.PNG)
+
+The updated with Ansible architecture now looks like this:
+
+![schematic2](./images-project11/schematic2.PNG)
 
