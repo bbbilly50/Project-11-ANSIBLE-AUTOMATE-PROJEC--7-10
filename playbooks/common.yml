@@ -46,8 +46,12 @@
 
 - name: set timezone
   hosts: webservers, nfs, lb, db
+  become: yes
+  tasks:
+    name: set timezone
       timezone:
-        name: Atlanta/georgia
+        name: GMT-5
+        
         
       
 
