@@ -26,8 +26,6 @@
         name: wireshark
         state: latest
 
-
-
         - name: create a diretory , a file and set timezone on all servers 
   hosts: webservers, nfs, lb, db
   become: yes
@@ -49,6 +47,7 @@
     - name: set timezone
       timezone:
         name: usa/georgia
+        
       
 
         
