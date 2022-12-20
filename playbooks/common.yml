@@ -50,8 +50,8 @@
   tasks:
     name: set timezone
       timezone:
-        name: GMT-5
-        
+        name: EST
+
         
       
 
