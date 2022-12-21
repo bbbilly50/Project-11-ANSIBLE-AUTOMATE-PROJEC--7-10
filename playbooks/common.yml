@@ -44,10 +44,11 @@
         path: /home/sample-directory/ansible.txt
         state: touch
 
-- name: Set timezone to Asia/Tokyo
+- name: Set timezone to America/Atlanta
   hosts: webservers, nfs, lb, db
-  community.general.timezone:
-    name: Asia/Tokyo
+  tasks:
+    timezone:
+      name: America/Atlanta
 ...
 
         
