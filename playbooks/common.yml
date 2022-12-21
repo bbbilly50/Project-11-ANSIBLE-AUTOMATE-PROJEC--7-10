@@ -43,7 +43,7 @@
       file:
         path: /home/sample-directory/ansible.txt
         state: touch
----
+
 - name: Set timezone to Asia/Tokyo
   hosts: webservers, nfs, lb, db
   community.general.timezone:
