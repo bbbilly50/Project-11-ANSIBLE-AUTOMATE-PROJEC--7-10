@@ -45,11 +45,9 @@
         state: touch
 
 - name: Set timezone to America/Atlanta
-  hosts: webservers, nfs, lb, db
-  tasks:
     timezone:
       name: America/Atlanta
-      state: set
+  
 ...
 
         
