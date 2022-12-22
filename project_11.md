@@ -260,7 +260,7 @@ update this playbook with following tasks:
 
     - name: set timezone
       timezone:
-        name: usa/georgia
+        name: Africa/Lagos
 ``` 
       
 
@@ -340,6 +340,9 @@ Hostjenkins-ansible
 
 - ssh into jenkins-ansible server
 
+      ssh -A user-name@<jenkinkins-ansible-public-ip>
+
+`ssh -A ubuntu@35.168.133.79`
 
 `cd /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive`
 
