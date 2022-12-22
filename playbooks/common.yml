@@ -43,11 +43,6 @@
       file:
         path: /home/sample-directory/ansible.txt
         state: touch
-
-- name: Set timezone to America/Atlanta
-    timezone:
-      name: America/Atlanta
-  
 ...
 
         
