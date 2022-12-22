@@ -46,7 +46,7 @@
 
     - name: set timezone
       timezone:
-        name: america/atlanta   
+        name: america/georgia   
 ...
 
         
