@@ -325,16 +325,6 @@ Hostjenkins-ansible
     ControlPersist 10m
 ```
 
-```py
-Hostjenkins-ansible
-    HostName 35.173.244.101
-    User ubuntu
-    IdentityFile C:/Users/bbbil/Downloads/sclient.pem
-    ForwardAgent yes
-    ControlPath /temp/ansible-ssh-%h-%p-%r
-    ControlMaster auto
-    ControlPersist 10m
-```
 
 ![vscode-config](./images-project11/vs-code%20ssh-config.PNG)
 
