@@ -43,10 +43,10 @@
       file:
         path: /home/sample-directory/ansible.txt
         state: touch
-        
+
     - name: set timezone
       timezone:
-        name: Africa/Lagos    
+        name: america/atlanta   
 ...
 
         
