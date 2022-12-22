@@ -260,7 +260,7 @@ update this playbook with following tasks:
 
     - name: set timezone
       timezone:
-        name: Africa/Lagos
+        name: US/Eastern 
 ``` 
       
 
