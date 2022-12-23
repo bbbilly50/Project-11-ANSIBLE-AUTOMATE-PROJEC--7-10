@@ -23,3 +23,5 @@ On the diagram below the Virtual Private Network (VPC) is divided into two subne
 Task
 Install and configure Ansible client to act as a Jump Server/Bastion Host
 Create a simple Ansible playbook to automate servers configuration
+
+### testing ansible copy artifact
