@@ -15,7 +15,7 @@
 - name: clone a repo
   become: true
   ansible.builtin.git:
-    repo: "https://github.com/bbbilly50/tooling.git"
+    repo: "https://github.com/bbbilly50/Project-1-lamp-stack.git"
     dest: "/var/www/html"
     force: yes
 
