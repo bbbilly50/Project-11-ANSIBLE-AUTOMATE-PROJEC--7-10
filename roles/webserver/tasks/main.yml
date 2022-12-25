@@ -17,9 +17,9 @@
   name: clone a repo
   become: true
   ansible.builtin.git:
-      repo: https://github.com/bbbilly50/tooling-1.git
-    dest: /var/www/html
-    force: yes
+    repo: https://github.com/bbbilly50/tooling-1.git
+      dest: /var/www/html
+      force: yes
 
 - 
   name: copy html content to one level up
