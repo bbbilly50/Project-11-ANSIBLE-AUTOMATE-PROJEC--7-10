@@ -13,7 +13,7 @@
     state: present
 
 - name: clone a repo
-  become: sudo
+  become: true
   ansible.builtin.git:
     repo: https://github.com/bbbilly50/tooling.git
     dest: /var/www/html
