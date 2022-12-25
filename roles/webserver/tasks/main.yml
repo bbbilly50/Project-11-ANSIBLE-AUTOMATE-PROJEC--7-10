@@ -19,9 +19,9 @@
     dest: "/var/www/html"
     force: yes
 
-#- name: copy html content to one level up
- # become: true
-  #command: cp -r /var/www/html/html/ /var/www/
+- name: copy html content to one level up
+  become: true
+  command: cp -r /var/www/html/html/ /var/www/
 
 - name: Start service httpd, if not started
   become: true
@@ -29,8 +29,8 @@
     name: httpd
     state: started
 
-#- name: recursively remove /var/www/html/html/ directory
- # become: true
- # ansible.builtin.file:
-  #  path: /var/www/html/html
- #   state: absent
+- name: recursively remove /var/www/html/html/ directory
+  become: true
+  ansible.builtin.file:
+    path: /var/www/html/html
+    state: absent
