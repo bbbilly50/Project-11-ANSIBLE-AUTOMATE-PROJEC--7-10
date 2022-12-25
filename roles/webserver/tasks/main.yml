@@ -17,7 +17,7 @@
   ansible.builtin.git:
     repo: "https://github.com/bbbilly50/tooling.git"
     dest: "/var/www/html"
-    #force: yes
+    force: yes
 
 #- name: copy html content to one level up
  # become: true
