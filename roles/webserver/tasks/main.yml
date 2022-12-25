@@ -12,12 +12,12 @@
     name: "git"
     state: present
 
-#- name: clone a repo
-  #become: true
-  #ansible.builtin.git:
-   # repo: https://github.com/bbbilly50/tooling.git
-   # dest: /var/www/html
-    #force: yes
+- name: clone a repo
+  become: true
+  ansible.builtin.git:
+    repo: https://github.com/bbbilly50/tooling.git
+    dest: /var/www/html
+    force: yes
 
 #- name: copy html content to one level up
  # become: true
