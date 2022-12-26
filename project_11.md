@@ -71,10 +71,7 @@ Now your setup will look like this:
 
 ### **step-3 BEGIN ANSIBLE DEVELOPMENT**
 
-1. In your `ansible-config-mgt` GitHub repository, create a `new branch` that will be used for development of a new feature.
-
-`git branch ansible-play`
-
+1. In your `ansible-config-mgt` GitHub repository, create a `new branch` that will 
 view all branches
 
 `git branch`
