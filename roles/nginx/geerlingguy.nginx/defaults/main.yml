@@ -82,9 +82,9 @@ nginx_upstreams: []
 # - name: myapp1
 #   strategy: "ip_hash" # "least_conn", etc.
 #   keepalive: 16 # optional
-#   servers:
-#     - "srv1.example.com"
-#     - "srv2.example.com weight=3"
+   servers:
+     - "172.31.94.105 weight=3"
+     - "172.31.86.162 weight=3"
 #     - "srv3.example.com"
 
 nginx_log_format: |-
