@@ -1,5 +1,5 @@
 ---
-- hosts: db
+- hosts: lb
   roles:
      - mysql
   become: true

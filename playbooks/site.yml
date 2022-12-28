@@ -35,7 +35,7 @@ include: ../dynamic-assignments/env-vars.yml
 
 - name: Loadbalancers assignment
        hosts: lb
-         - import_playbook: ../static-assignments/loadbalancers.yml
+         - import_playbook: ../static-assignments/loadbalancer.yml
         when: load_balancer_is_required 
 
 
