@@ -62,8 +62,12 @@ nginx_remove_default_vhost: false
 nginx_listen_ipv6: true
 
 nginx_vhosts: []
+  - listen: "80"
+  web1: "172.31.94.105:80 weight=3"
+  web2: "172.31.86.162:80 weight=3"
+
 # Example vhost below, showing all available options:
-# - listen: "80" # default: "80"
+#   - listen: "80" # default: "80"
 #   server_name: "example.com" # default: N/A
 #   root: "/var/www/example.com" # default: N/A
 #   index: "index.html index.htm" # default: "index.html index.htm"
@@ -79,15 +83,22 @@ nginx_vhosts: []
 #   state: "absent" # To remove the vhost configuration.
 
 nginx_upstreams: []
-# - name: myapp1
+- name: myappl
 #   strategy: "ip_hash" # "least_conn", etc.
 #   keepalive: 16 # optional
    servers:
-     - "172.31.94.105 weight=3"
-     - "172.31.86.162 weight=3"
-#     - "srv3.example.com"
+      web1: "172.31.94.105:80 weight=3"
+      web2: "172.31.86.162:80 weight=3"
+   
+    #     - "srv3.example.com"
 
+    proxy_pass: http://myappl
+    
+    
 nginx_log_format: |-
   '$remote_addr - $remote_user [$time_local] "$request" '
   '$status $body_bytes_sent "$http_referer" '
   '"$http_user_agent" "$http_x_forwarded_for"'
+
+enable_nginx_lb: false 
+load_balancer_is_required: false

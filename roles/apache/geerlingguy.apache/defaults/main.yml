@@ -66,3 +66,6 @@ loadbalancer_name: "myappl"
 web1: "172.31.94.105 weight=3"
 web2: "172.31.86.162 weight=3"
 
+enable_apache_lb: false
+load_balancer_is_required: false
+

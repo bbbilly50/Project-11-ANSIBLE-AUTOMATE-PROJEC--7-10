@@ -12,14 +12,30 @@
 #- import_playbook: ../static-assignments/common-del-apache.yml
 
 
-- hosts: all
-- name: Include dynamic variables 
-  tasks:
-  import_playbook: ../static-assignments/common.yml 
-  include: ../dynamic-assignments/env-vars.yml
-  tags:
-    - always
+#- hosts: all
+#- name: Include dynamic variables 
+ # tasks:
+ # import_playbook: ../static-assignments/common.yml 
+ # include: ../dynamic-assignments/env-vars.yml
+ # tags:
+ #   - always
 
--  hosts: webservers
-- name: Webserver assignment
-  import_playbook: ../static-assignments/webservers.yml
+#-  hosts: webservers
+#- name: Webserver assignment
+#  import_playbook: ../static-assignments/webservers.yml
+
+
+- name: inport database
+  import_playbook: ../static-assignments/db.yml
+
+- name: include env-vars file
+include: ../dynamic-assignments/env-vars.yml
+  tags:
+     - always
+
+- name: Loadbalancers assignment
+       hosts: lb
+         - import_playbook: ../static-assignments/loadbalancers.yml
+        when: load_balancer_is_required 
+
+
