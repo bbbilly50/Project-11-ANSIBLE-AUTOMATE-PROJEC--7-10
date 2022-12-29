@@ -11,9 +11,7 @@
 #- hosts: uat-webservers
 #- import_playbook: ../static-assignments/common-del-apache.yml
 
--
-
-- name: include dynamic variables
+- name: Addeing dynamic variables
   hosts: all 
   tasks:
     import_playbook: ../static-assignments/common.yml 
