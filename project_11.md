@@ -22,7 +22,8 @@ Check your Ansible version by running
 
 ![ansible-v](./images-project11/ansible-v.PNG)
 
-
+</br>
+ 
 **Configure Jenkins build job to save your repository content every time you change it** 
 
 Create a new Freestyle project `ansible` in Jenkins and point it to your `‘ansible-config-mgt’` repository.
