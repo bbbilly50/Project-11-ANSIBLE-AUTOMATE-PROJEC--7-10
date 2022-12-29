@@ -62,9 +62,10 @@ nginx_remove_default_vhost: false
 nginx_listen_ipv6: true
 
 nginx_vhosts: []
+
+proxy_pass: http://myappl
   - listen: "80"
-  web1: "172.31.94.105:80 weight=3"
-  web2: "172.31.86.162:80 weight=3"
+   
 
 # Example vhost below, showing all available options:
 #   - listen: "80" # default: "80"
@@ -92,7 +93,7 @@ nginx_upstreams: []
    
     #     - "srv3.example.com"
 
-    proxy_pass: http://myappl
+    
     
     
 nginx_log_format: |-
