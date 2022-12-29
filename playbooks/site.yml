@@ -16,7 +16,7 @@
 - name: Include dynamic variables 
   tasks:
     import_playbook: ../static-assignments/common.yml 
-    import_palybook: ../dynamic-assignments/env-vars.yml
+    include_playbook: ../dynamic-assignments/env-vars.yml
   tags:
     - always
 
