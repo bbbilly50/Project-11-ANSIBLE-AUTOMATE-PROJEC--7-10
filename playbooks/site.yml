@@ -10,6 +10,7 @@
 
 #- hosts: uat-webservers
 #- import_playbook: ../static-assignments/common-del-apache.yml
+
 ---
 
 - name: include dynamic variables
@@ -34,6 +35,6 @@
 - import_playbook: ../static-assignments/loadbalancers.yml
   when: load_balancer_is_required 
 
-...
+
 
 
